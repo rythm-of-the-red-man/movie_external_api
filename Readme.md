@@ -1,6 +1,4 @@
-# Project Title
-
-Movie API - Recruitment task
+# Movie API - Recruitment task 
 
 ## Getting Started
 
