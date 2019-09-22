@@ -36,7 +36,7 @@ docker exec movies_api python3 manage.py test
 To develop this app I have used requests, whitenoise and django-rest-framework. I have used requests to build movie-service which handle external API requests. Whitenoise serves static files from django-rest-framework. Django-rest-framework was used to actually build API, including serializers and views. For SQLite/PostgreSQL handling python-dotenv and dj-database-url are in use.
 
 ## Database
-App uses sql-lite local database, when ran locally. When deployed to heroku, it doesnt get .env file, so heroku mount postgres, as default database.
+App uses sql-lite local database, when ran locally. When deployed to heroku, it doesnt gets .env_prod file, which have DATABASE_URL env variable changed to production database uri.
 
 ## Routes
 
