@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    environment:
+      - PORT=8000
+    container_name: movies_api
+    ports:
+      - "8000:8000"

@@ -1,0 +1,55 @@
+{% extends "rest_framework/api.html" %}
+{% block body %}
+<div class="jumbotron">
+    <div class="container">
+            <h1>Welcome to open Movie API!</h1>
+            <p>Store and comment favourites movies here.</p>
+
+    </div>
+</div>
+
+<div class='container'>
+    <h2>Routes for you</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Method</th>
+            <th>Route</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/movies</td>
+            <td>Takes title of a movie as argument (in JSON file), and saves it to database.</td>
+            <td>Example request body: {'title':'The Shining'}</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/movies</td>
+            <td>Returns all movies in database.</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/comment</td>
+            <td>Takes movie id and comment as arguments and add comment to database.</td>
+            <td>Example request body: {'movie':1,'comment':'Cool!'}</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/comment</td>
+            <td>Returns all coments from database.</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/top</td>
+            <td>Returns ranking of movies from specified period of time.</td>
+            <td>Example request body: /top/?date_start=2011-10-21&date_end=2020-10-21</td>
+        </tr>
+    </table>
+
+</div>
+
+
+{% endblock body %}
