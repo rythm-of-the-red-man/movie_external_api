@@ -4,12 +4,12 @@ WORKDIR /code
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV DEBUG 0
-ENV PROD_APP=1
-COPY .env_prod /code/.env_prod
+
 COPY recruitment /code/recruitment
 COPY movies /code/movies
 COPY manage.py /code/manage.py
 COPY requirements.txt /code/requirements.txt
+COPY .env /code/.env
 RUN pip3 install -r requirements.txt
 RUN python3 manage.py makemigrations
 RUN python3 manage.py migrate

@@ -2,7 +2,9 @@ version: '3'
 
 services:
   web:
-    build: .
+    build: 
+      dockerfile: ./Build/Local/Dockerfile
+      context: .
     environment:
       - PORT=8000
     container_name: movies_api
